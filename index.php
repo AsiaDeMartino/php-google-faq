@@ -29,9 +29,33 @@ $faq = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
+        <header>
+            <div class="row flex logo">
+                <div class="flex">
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+                    <span>Privacy e termini</span>
+                </div>
+                <div class="flex">
+                    <img src="https://cdn-icons-png.flaticon.com/512/17/17704.png" alt="">
+                    <div class="tondo">
+                        <img src="img/profile.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row bordo flex">
+                <ul class="flex">
+                    <li>Introduzione</li>
+                    <li>Norme sulla privacy</li>
+                    <li>Termini di servizio</li>
+                    <li>Tecnologie</li>
+                    <li class="active">Domande frequenti</li>
+                </ul>
+            </div>
+        </header>
        <div class="main-content">
        <?php 
             foreach($faq as $value){
@@ -80,44 +104,109 @@ $faq = [
 <style>
     *{
         font-family:sans-serif;
-        font-size:15px;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
+    img{
+        display: block;
+        height: 25px;
+    }
+
     .main-content{
         width: 70vw;
         margin: 0 auto;
         padding: 50px 0;
+        font-size: 15px;
     }
+
     h2{
         font-size:25px;
         margin-top: 50px;
     }
+
     h3{
         font-size: 20px;
         margin-top: 40px;
     }
+
     a{
         text-decoration: none;
     }
+
     p{
         margin: 20px 0;
     }
+
     ol{
         margin-left: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
     li{
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    header{
+        padding-top: 10px;
+    }
     .row{
-        display: flex;
-        gap: 40px;
-        padding: 20px;
+        padding: 0 20px;
         color: gray;
     }
+
+    .bordo{
+        border-bottom: 1px solid gray;
+        height: 30px;
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .logo{
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .row ul{
+        list-style: none;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .row li{
+        padding-bottom: 10px;
+    }
+
+    .row li:hover{
+        color: #3367d6;
+        border-bottom: 2px solid #3367d6;
+    }
+
+    .active{
+        color: #3367d6;
+        border-bottom: 2px solid #3367d6;
+    }
+
+    .tondo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        background-color: rgb(174,35,13);
+        border-radius: 50%;
+    }
+
+    
+
 </style>
 </html>
